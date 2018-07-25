@@ -1,0 +1,31 @@
+version: "3"
+services:
+  sql-db:
+    image: mysql:5.7
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: mydb
+      MYSQL_USER: root
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_ROOT_HOST: localhost
+    networks: 
+      - beer-net
+  beer-app:
+    build: .
+    depends_on:
+      - sql-db
+    restart: on-failure
+    ports:
+      - 8080:8080
+    networks: 
+      - beer-net
+    links: 
+      - sql-db:sql-db
+volumes:
+  db-data: {}
+  
+networks:
+  beer-net:
+    driver: bridge

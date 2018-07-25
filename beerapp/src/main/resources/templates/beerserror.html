@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Beers</title>
+<link rel="stylesheet" type="text/css" th:href="@{/style.css}" />
+</head>
+<body>
+	<header>
+		<h1>The Random Beer App</h1>
+		<h2>
+			<a th:href="@{/beerapp/view}">Show Another Beer</a>
+		</h2>
+	</header>
+	<div id="main">
+		<article>
+			<h2>No Record found</h2>
+		</article>
+		<nav>
+			<h2>Health Benefits of Beer</h2>
+			<p>Decreases the risk of heart attacks</p>
+			<p>Increases good cholesterol</p>
+			<p>Strengthens your bones</p>
+			<p>Boosts Nutrients</p>
+			<p>Reduces risk of Kidney Stones</p>
+			<p>Reduces risk of Kidney Stones</p>
+			<p>Lowers risk of Diabetes</p>
+			<p>Improves Eye Health</p>
+		</nav>
+		<aside>
+			<p>
+				<img th:src="@{/images/beers.jpeg}" />
+			</p>
+			<p>
+				<img th:src="@{/images/beers1.jpeg}" />
+			</p>
+			<p>
+				<img th:src="@{/images/beers2.jpeg}" />
+			</p>
+		</aside>
+	</div>
+	<footer> </footer>
+</body>
+</html>
