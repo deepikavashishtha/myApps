@@ -1,0 +1,22 @@
+version: "3"
+services:
+  sql-db:
+    image: mysql
+    ports:
+      - 3306:3306
+    volumes:
+      - db-data:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_DATABASE: mydb
+      MYSQL_USER: root
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: password
+    network_mode: host
+  spring-mysql:
+    build: .
+    depends_on:
+      - sql-db
+    network_mode: host
+volumes:
+  db-data:
+    external: true

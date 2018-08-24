@@ -1,0 +1,5 @@
+com/sql/demo/sqlDemo/MainController.class
+com/sql/demo/sqlDemo/App.class
+com/sql/demo/sqlDemo/TestJDBCConnection.class
+com/sql/demo/sqlDemo/UserRepository.class
+com/sql/demo/entities/User.class
