@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Angular js demo</title>
+<script src="/home/edeevas/tools/angular.js" type="text/javascript"></script>
+</head>
+<body>
+	<h1>Sample Application 2</h1>
+	<div ng-app="">
+		<table border="0">
+			<tr>
+				<td><input type="checkbox" ng-model="enabeleDisableButton">DisableButton</td>
+				<td><button ng-disabled="enabeleDisableButton">clickme</button></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" ng-model="showhide1">showbutton</td>
+				<td><button ng-show="showhide1">clickme</button></td>
+			</tr>
+			<tr>
+				<td><p>TOtal CLick: {{clickcounter}}</p></td>
+				<td><button ng-click="clickcounter = clickcounter + 1">clickme</button></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
